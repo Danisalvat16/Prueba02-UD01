@@ -9,7 +9,7 @@ document.getElementById("idioma").textContent = window.navigator.language;
 function mostrarDimensiones() {
     let exterior = window.outerWidth + "x" + window.outerHeight;
     let interior = window.innerWidth + "x" + window.innerHeight;
-    window.alert("Interior: "+ interior+ " Exterior: "+ exterior)
+    alert("Interior: "+ interior+ " Exterior: "+ exterior)
 }
 
 // ACT3
@@ -24,13 +24,13 @@ function volver(){
 
 
 //ACT4
-let tiempo=30;
+let tiempo=5;
 let temporizador;
 function iniciar() {
     temporizador = setInterval(() => {
         document.getElementById("contador").textContent = ("Quedan "+tiempo+" segundos")
         tiempo--;
-        if (tiempo == 0) {
+        if (tiempo == -1) {
             clearInterval(temporizador);
             alert("Se te acabo el tiempo");
         }
